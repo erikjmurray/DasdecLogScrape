@@ -1,0 +1,14 @@
+[
+  {
+    "name": "dasdec name here",
+    "ip_addr" : "0.0.0.0",
+    "username" : "admin",
+    "password" : "password" 
+  },
+  {
+    "name": "second unit",
+    "ip_addr" : "0.0.0.0",
+    "username" : "admin",
+    "password" : "password" 
+  },
+]
