@@ -39,6 +39,7 @@ def create_scrapers(playwright: async_playwright,
     """ Initialize DasdecScraper class """
     return [DasdecScraper(playwright, **dasdec) for dasdec in dasdecs]
 
+
 def write_to_file(name: str, content: str) -> None:
     """ Write content to txt file in separate folder """
     target_dir = os.path.join(os.getcwd(), 'ScrapedLogs')
@@ -59,7 +60,7 @@ async def main():
     dasdecs = read_creds_file()
     results = await get_dasdec_logs(dasdecs)
     for result in results:
-        write_to_file(name, content)
+        write_to_file(*result)
 
 
 if __name__ == "__main__":
