@@ -75,7 +75,10 @@ python main.py
 - `password`: The password for accessing the DASDEC unit.
 - `name`: A name or identifier for the DASDEC unit.
 - `timeframe`: The timeframe for which you want to scrape the logs (e.g., "7days", "30days"). 
-  This parameter is optional, and if not provided, the default value is set to "7days".
+   - This parameter is optional, and if not provided, the default value is set to "7days".
+   - Potential Options:
+      -  7days
+      -  30days
   
 ## LICENSE
 
