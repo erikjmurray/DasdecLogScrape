@@ -95,13 +95,15 @@ To use the scraper, follow these steps:
  
 1. Make sure you have provided a valid credentials json file as detailed above.
  
-2. Run the main script.
+2. Run the scrape script.
 
 ```shell
-python main.py
+python scrape.py
 ```
  
 3. The logs will be stored in a folder called ScrapedLogs in root directory of the project.
+ 
+4. 
 </details>
 
 ## LICENSE
