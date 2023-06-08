@@ -4,8 +4,8 @@
 
 - [Description](#description)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Configuration](#configuration)
+- [Usage](#usage)
 - [License](#license)
 
 ## Description
@@ -14,6 +14,10 @@ The project is a scraper built using Playwright to extract logs from DASDEC unit
 
 ## Installation
 
+<details>
+ 
+<summary>Getting started</summary>
+ 
 1. Clone the repository.
 
 ```shell
@@ -36,13 +40,30 @@ Note that you may need to use a variation of the following command if you have n
 ```shell
 python -m pip ...
 ```
+</details>
+ 
+## Configuration
 
-## Usage
-
-To use the scraper, follow these steps:
-
-1. Prepare the `creds.json` file with the credentials for the DASDEC units.
-
+<details>
+<summary>Parameter Definitions for Creds file</summary> 
+ 
+- `ip_addr`: The IP address of the DASDEC unit.
+- `username`: The username for accessing the DASDEC unit.
+- `password`: The password for accessing the DASDEC unit.
+- `name`: A name or identifier for the DASDEC unit.
+- `timeframe`: The timeframe for which you want to scrape the logs (e.g., "7days", "30days"). 
+   - This parameter is optional, and if not provided, the default value is set to "7days".
+   -  |           |           | Options  |          |        |   
+      | :-------: | :-------: | :------: | :------: | :----: |
+      | today     | 2days     | 7days    | 14days   | 28days |
+      | 60days    | 120days   | thisweek | lastweek | 2weeks |
+      | thismonth | lastmonth | 2months  | thisyear | random |
+ 
+</details>
+<details>
+ 
+<summary>Example Creds File</summary>
+ 
 ```json
  [
      {
@@ -61,25 +82,28 @@ To use the scraper, follow these steps:
      }
  ]
 ```
+ 
+</details>
+ 
+## Usage
 
+<details>
+ 
+<summary>Running the Script</summary>
+ 
+To use the scraper, follow these steps:
+ 
+1. Make sure you have provided a valid credentials json file as detailed above.
+ 
 2. Run the main script.
 
 ```shell
 python main.py
 ```
+ 
+3. The logs will be stored in a folder called ScrapedLogs in root directory of the project.
+</details>
 
-## Configuration
-
-- `ip_addr`: The IP address of the DASDEC unit.
-- `username`: The username for accessing the DASDEC unit.
-- `password`: The password for accessing the DASDEC unit.
-- `name`: A name or identifier for the DASDEC unit.
-- `timeframe`: The timeframe for which you want to scrape the logs (e.g., "7days", "30days"). 
-   - This parameter is optional, and if not provided, the default value is set to "7days".
-   - Potential Options:
-      -  7days
-      -  30days
-  
 ## LICENSE
 
 Feel free to customize the configuration and adapt the code to your specific requirements.
@@ -87,7 +111,3 @@ Feel free to customize the configuration and adapt the code to your specific req
 [MIT License](LICENSE)
 
 ---
-
-Feel free to modify the sections, add more details, or customize the `README.md` file further according to your project's specific needs.
-
-
