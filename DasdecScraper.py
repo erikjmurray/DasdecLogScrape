@@ -111,7 +111,7 @@ class DasdecScraper:
     async def _get_content_from_txt_log(self) -> str:
         link = await self._get_txt_log_link()
         if not link:
-            log = 'Error download link not found'
+            content = 'Error download link not found'
         else:
             await self.page.click(link)
             await self.page.wait_for_timeout(1000)
@@ -131,12 +131,4 @@ class DasdecScraper:
             if link:
                 return f'a[href="/dasdec_originated_events/report{i}.txt"]'
         return None
-
-
-
-
-
-
-
-
 
